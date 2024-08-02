@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+code {
+    background-color: #e8e8e8;
+    border-radius: 3px;
+    padding: 1px;
+    font-size: 1.1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ab3737;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
