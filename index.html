@@ -5,44 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commands Reference</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        code {
-            background-color: #e8e8e8;
-            border-radius: 3px;
-            padding: 5px;
-            font-size: 1.1em;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        pre {
-            background-color: #eee;
-            border-radius: 5px;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -50,47 +12,52 @@
         
         <div class="section">
             <h2>Initialize & Clone</h2>
-            <pre><code>git init : Initialize a local Git repository
-git clone https://git@github.com/[username]/[repository-name].git : Create a local copy of a remote repository</code></pre>
+            <pre><code>git init : Initialize a local git repo
+git clone https://git@github.com/[username]/[repository-name].git : Create a local copy of repo</code></pre>
         </div>
 
         <div class="section">
-            <h2>Basic Snapshotting</h2>
-            <pre><code>git status : Check status
-git add [file-name.txt] : Add a file to the staging area
-git add -A : Add all new and changed files to the staging area
-git commit -m "[commit message]" : Commit changes
-git rm -r [file-name.txt] : Remove a file (or folder)</code></pre>
+            <h2>Add & Commit</h2>
+            <pre><code>git status : Checks for changes in branches 
+git add [file-name] : Add a file to the stage
+git add . : Add all changed files to stage 
+
+git commit -m "[commit message]" : Save changes and write commit message
+
+git rm -r [file-name] : Remove a file or folder</code></pre>
         </div>
 
         <div class="section">
-            <h2>Branching & Merging</h2>
-            <pre><code>git branch : List branches (the asterisk denotes the current branch)
-git branch -d [branch name] : Delete a branch
-git push origin --delete [branch name] : Delete a remote branch
+            <h2>Branch & Merge</h2>
+            <pre><code>git branch : List branches 
+git brancch -d [branch name] : Delete a branch
+
 git checkout -b [branch name] : Create a new branch and switch to it
 git checkout [branch name] : Switch to a branch
-git branch -m [old branch name] [new branch name] : Rename a local branch
+
 git merge [branch name] : Merge a branch into the active branch
 git merge [source branch] [target branch] : Merge a branch into a target branch</code></pre>
         </div>
 
         <div class="section">
-            <h2>Sharing & Updating Projects</h2>
+            <h2>Send & Receive</h2>
             <pre><code>git push origin [branch name] : Push a branch to your remote repository
-git push -u origin [branch name] : Push changes to remote repository (and remember the branch)
-git push : Push changes to remote repository (remembered branch)
+git push -u origin [branch name] : pushes a specific branch [branch name] to the remote repository(origin)
+git push : Push changes to remote repository (active branch)
 git push origin --delete [branch name] : Delete a remote branch
+
 git pull : Update local repository to the newest commit
 git pull origin [branch name] : Pull changes from remote repository
+
 git remote add origin https://git@github.com/[username]/[repository-name].git : Add a remote repository</code></pre>
         </div>
 
         <div class="section">
-            <h2>Inspection & Comparison</h2>
+            <h2>Comparison & View Changes</h2>
             <pre><code>git log : View changes
 git log --summary : View changes (detailed)
 git log --oneline : View changes (briefly)
+
 git diff [source branch] [target branch] : Preview changes before merging</code></pre>
         </div>
 
